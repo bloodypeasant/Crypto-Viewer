@@ -1,0 +1,29 @@
+Most Common 2 Letter Combinations in English:
+
+LL (double "L"): 0.577%
+SS (double "S"): 0.405%
+EE (double "E"): 0.378%
+OO (double "O"): 0.210%
+TT (double "T"): 0.171%
+FF (double "F"): 0.146%
+PP (double "P"): 0.137%
+RR (double "R"): 0.121%
+MM (double "M"): 0.096%
+CC (double "C"): 0.083%
+NN (double "N"): 0.073%
+DD (double "D"): 0.043%
+GG (double "G"): 0.025%
+II (double "I"): 0.023%
+BB (double "B"): 0.011%
+AA (double "A"): 0.003%
+ZZ (double "Z"): 0.003%
+XX (double "X"): 0.003%
+UU (double "U"): 0.001%
+HH (double "H"): 0.001%
+
+QQ, JJ, WW, KK, YY, and VV did not appear in the English corpus.
+
+
+
+
+Source: https://blogs.sas.com/content/iml/2014/10/03/double-letter-bigrams.html

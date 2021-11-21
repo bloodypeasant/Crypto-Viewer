@@ -1,0 +1,7 @@
+<svg  xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+      viewBox="0 0 100 100" preserveAspectRatio="none">
+  <rect x="10" y="10" height="20" width="80" fill="gray" rx="5" ry="5" />
+  <rect x="10" y="40" height="20" width="80" fill="gray" rx="5" ry="5" />
+  <rect x="10" y="70" height="20" width="80" fill="gray" rx="5" ry="5" />
+</svg>

@@ -1,0 +1,689 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+body {
+  margin: 0;
+  overflow: hidden;
+  background-color: rgb(200, 200, 200);
+}
+#menu-div {
+  position: absolute;
+  left: 0.5em;
+  top: 0;
+  width: calc(100% - 0.5em);
+  height: 2em;
+  background-color: rgb(200, 200, 200);
+}
+#alphabet-div {
+  position: absolute;
+  left: 0;
+  top: 2em;
+  width: 8em;
+  height: calc(100% - 2.75em);
+  background-color: rgb(200, 200, 200);
+}
+#text-div {
+  position: absolute;
+  left: 8.25em;
+  top: 2.25em;
+  width: calc(100% - 9.25em);
+  height: calc(50% - 2em);
+  background-color: white;
+  border: inset;
+  overflow-y: auto;
+}
+#tools-div {
+  position: absolute;
+  left: 8.25em;
+  top: calc(50% + 1em);
+  width: calc(50% - 5em);
+  height: calc(50% - 2em);
+  background-color: white;
+  border: inset;
+  overflow-y: auto;
+}
+#history-div {
+  position: absolute;
+  left: calc(50% + 4em);
+  top: calc(50% + 1em);
+  width: calc(50% - 5em);
+  height: calc(50% - 2em);
+  background-color: white;
+  border: inset;
+  overflow-y: auto;
+}
+#menu-popup {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: rgb(200, 200, 200);
+  border: outset;
+  margin: 1em;
+  display: none;
+}
+#menu-popup-close {
+  text-align: right;
+}
+#menu-popup-close-inner {
+  border: outset;
+}
+#menu-popup-close-inner:hover {
+  border: inset;
+}
+.menu-popup-item {
+  border: outset;
+  margin: 0.5em;
+}
+.menu-popup-item:hover {
+  border: inset;
+}
+.menu-letter {
+  position: absolute;
+  top: 2px;
+  width: calc(80% / 26 - 4px);
+  height: calc(100% - 8px);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+  border: outset;
+}
+.menu-letter:hover {
+  border: inset;
+}
+#menu-a {
+  left: calc(90% / 26 * 0);
+  background-image: url("./alphabet/plain/a.svg");
+}
+#menu-b {
+  left: calc(90% / 26 * 1);
+  background-image: url("./alphabet/plain/b.svg");
+}
+#menu-c {
+  left: calc(90% / 26 * 2);
+  background-image: url("./alphabet/plain/c.svg");
+}
+#menu-d {
+  left: calc(90% / 26 * 3);
+  background-image: url("./alphabet/plain/d.svg");
+}
+#menu-e {
+  left: calc(90% / 26 * 4);
+  background-image: url("./alphabet/plain/e.svg");
+}
+#menu-f {
+  left: calc(90% / 26 * 5);
+  background-image: url("./alphabet/plain/f.svg");
+}
+#menu-g {
+  left: calc(90% / 26 * 6);
+  background-image: url("./alphabet/plain/g.svg");
+}
+#menu-h {
+  left: calc(90% / 26 * 7);
+  background-image: url("./alphabet/plain/h.svg");
+}
+#menu-i {
+  left: calc(90% / 26 * 8);
+  background-image: url("./alphabet/plain/i.svg");
+}
+#menu-j {
+  left: calc(90% / 26 * 9);
+  background-image: url("./alphabet/plain/j.svg");
+}
+#menu-k {
+  left: calc(90% / 26 * 10);
+  background-image: url("./alphabet/plain/k.svg");
+}
+#menu-l {
+  left: calc(90% / 26 * 11);
+  background-image: url("./alphabet/plain/l.svg");
+}
+#menu-m {
+  left: calc(90% / 26 * 12);
+  background-image: url("./alphabet/plain/m.svg");
+}
+#menu-n {
+  left: calc(90% / 26 * 13);
+  background-image: url("./alphabet/plain/n.svg");
+}
+#menu-o {
+  left: calc(90% / 26 * 14);
+  background-image: url("./alphabet/plain/o.svg");
+}
+#menu-p {
+  left: calc(90% / 26 * 15);
+  background-image: url("./alphabet/plain/p.svg");
+}
+#menu-q {
+  left: calc(90% / 26 * 16);
+  background-image: url("./alphabet/plain/q.svg");
+}
+#menu-r {
+  left: calc(90% / 26 * 17);
+  background-image: url("./alphabet/plain/r.svg");
+}
+#menu-s {
+  left: calc(90% / 26 * 18);
+  background-image: url("./alphabet/plain/s.svg");
+}
+#menu-t {
+  left: calc(90% / 26 * 19);
+  background-image: url("./alphabet/plain/t.svg");
+}
+#menu-u {
+  left: calc(90% / 26 * 20);
+  background-image: url("./alphabet/plain/u.svg");
+}
+#menu-v {
+  left: calc(90% / 26 * 21);
+  background-image: url("./alphabet/plain/v.svg");
+}
+#menu-w {
+  left: calc(90% / 26 * 22);
+  background-image: url("./alphabet/plain/w.svg");
+}
+#menu-x {
+  left: calc(90% / 26 * 23);
+  background-image: url("./alphabet/plain/x.svg");
+}
+#menu-y {
+  left: calc(90% / 26 * 24);
+  background-image: url("./alphabet/plain/y.svg");
+}
+#menu-z {
+  left: calc(90% / 26 * 25);
+  background-image: url("./alphabet/plain/z.svg");
+}
+#menu-undo {
+  right: calc(90% / 26 + 0.75em);
+  background-image: url("./menu/undo.svg");
+}
+#menu-dropdown {
+  right: 0.75em;
+  background-image: url("./menu/dropdown.svg");
+}
+#alphabet-label-div {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 1.5em;
+  background-color: rgb(200, 200, 200);
+}
+#alphabet-label-top {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 1em;
+  background-image: url("./alphabet/alphabet.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+}
+#alphabet-label-bottom {
+  position: absolute;
+  left: 0;
+  top: 1em;
+  width: 100%;
+  height: 0.5em;
+}
+#alphabet-label-cipher,
+#alphabet-label-plain {
+  position: absolute;
+  top: 0;
+  width: 48%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+  border: none;
+}
+#alphabet-label-cipher {
+  background-image: url("./alphabet/cipher.svg");
+}
+#alphabet-label-plain {
+  background-image: url("./alphabet/plain.svg");
+}
+#alphabet-letters-div {
+  position: absolute;
+  left: 0;
+  top: 1.5em;
+  width: 100%;
+  height: calc(100% - 1.5em);
+}
+#alphabet-a {
+  top: 0;
+}
+#alphabet-b {
+  top: calc(100% / 26 * 1);
+}
+#alphabet-c {
+  top: calc(100% / 26 * 2);
+}
+#alphabet-d {
+  top: calc(100% / 26 * 3);
+}
+#alphabet-e {
+  top: calc(100% / 26 * 4);
+}
+#alphabet-f {
+  top: calc(100% / 26 * 5);
+}
+#alphabet-g {
+  top: calc(100% / 26 * 6);
+}
+#alphabet-h {
+  top: calc(100% / 26 * 7);
+}
+#alphabet-i {
+  top: calc(100% / 26 * 8);
+}
+#alphabet-j {
+  top: calc(100% / 26 * 9);
+}
+#alphabet-k {
+  top: calc(100% / 26 * 10);
+}
+#alphabet-l {
+  top: calc(100% / 26 * 11);
+}
+#alphabet-m {
+  top: calc(100% / 26 * 12);
+}
+#alphabet-n {
+  top: calc(100% / 26 * 13);
+}
+#alphabet-o {
+  top: calc(100% / 26 * 14);
+}
+#alphabet-p {
+  top: calc(100% / 26 * 15);
+}
+#alphabet-q {
+  top: calc(100% / 26 * 16);
+}
+#alphabet-r {
+  top: calc(100% / 26 * 17);
+}
+#alphabet-s {
+  top: calc(100% / 26 * 18);
+}
+#alphabet-t {
+  top: calc(100% / 26 * 19);
+}
+#alphabet-u {
+  top: calc(100% / 26 * 20);
+}
+#alphabet-v {
+  top: calc(100% / 26 * 21);
+}
+#alphabet-w {
+  top: calc(100% / 26 * 22);
+}
+#alphabet-x {
+  top: calc(100% / 26 * 23);
+}
+#alphabet-y {
+  top: calc(100% / 26 * 24);
+}
+#alphabet-z {
+  top: calc(100% / 26 * 25);
+}
+#alphabet-cipher-a {
+  background-image: url("./alphabet/cipher/a.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+}
+#alphabet-cipher-b {
+  background-image: url("./alphabet/cipher/b.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+}
+#alphabet-cipher-c {
+  background-image: url("./alphabet/cipher/c.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+}
+#alphabet-cipher-d {
+  background-image: url("./alphabet/cipher/d.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+}
+#alphabet-cipher-e {
+  background-image: url("./alphabet/cipher/e.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+}
+#alphabet-cipher-f {
+  background-image: url("./alphabet/cipher/f.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+}
+#alphabet-cipher-g {
+  background-image: url("./alphabet/cipher/g.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+}
+#alphabet-cipher-h {
+  background-image: url("./alphabet/cipher/h.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+}
+#alphabet-cipher-i {
+  background-image: url("./alphabet/cipher/i.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+}
+#alphabet-cipher-j {
+  background-image: url("./alphabet/cipher/j.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+}
+#alphabet-cipher-k {
+  background-image: url("./alphabet/cipher/k.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+}
+#alphabet-cipher-l {
+  background-image: url("./alphabet/cipher/l.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+}
+#alphabet-cipher-m {
+  background-image: url("./alphabet/cipher/m.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+}
+#alphabet-cipher-n {
+  background-image: url("./alphabet/cipher/n.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+}
+#alphabet-cipher-o {
+  background-image: url("./alphabet/cipher/o.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+}
+#alphabet-cipher-p {
+  background-image: url("./alphabet/cipher/p.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+}
+#alphabet-cipher-q {
+  background-image: url("./alphabet/cipher/q.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+}
+#alphabet-cipher-r {
+  background-image: url("./alphabet/cipher/r.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+}
+#alphabet-cipher-s {
+  background-image: url("./alphabet/cipher/s.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+}
+#alphabet-cipher-t {
+  background-image: url("./alphabet/cipher/t.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+}
+#alphabet-cipher-u {
+  background-image: url("./alphabet/cipher/u.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+}
+#alphabet-cipher-v {
+  background-image: url("./alphabet/cipher/v.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+}
+#alphabet-cipher-w {
+  background-image: url("./alphabet/cipher/w.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+}
+#alphabet-cipher-x {
+  background-image: url("./alphabet/cipher/x.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+}
+#alphabet-cipher-y {
+  background-image: url("./alphabet/cipher/y.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+}
+#alphabet-cipher-z {
+  background-image: url("./alphabet/cipher/z.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+}
+#alphabet-plain-a {
+  background-image: url("./alphabet/unknown.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+}
+#alphabet-plain-b {
+  background-image: url("./alphabet/unknown.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+}
+#alphabet-plain-c {
+  background-image: url("./alphabet/unknown.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+}
+#alphabet-plain-d {
+  background-image: url("./alphabet/unknown.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+}
+#alphabet-plain-e {
+  background-image: url("./alphabet/unknown.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+}
+#alphabet-plain-f {
+  background-image: url("./alphabet/unknown.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+}
+#alphabet-plain-g {
+  background-image: url("./alphabet/unknown.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+}
+#alphabet-plain-h {
+  background-image: url("./alphabet/unknown.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+}
+#alphabet-plain-i {
+  background-image: url("./alphabet/unknown.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+}
+#alphabet-plain-j {
+  background-image: url("./alphabet/unknown.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+}
+#alphabet-plain-k {
+  background-image: url("./alphabet/unknown.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+}
+#alphabet-plain-l {
+  background-image: url("./alphabet/unknown.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+}
+#alphabet-plain-m {
+  background-image: url("./alphabet/unknown.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+}
+#alphabet-plain-n {
+  background-image: url("./alphabet/unknown.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+}
+#alphabet-plain-o {
+  background-image: url("./alphabet/unknown.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+}
+#alphabet-plain-p {
+  background-image: url("./alphabet/unknown.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+}
+#alphabet-plain-q {
+  background-image: url("./alphabet/unknown.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+}
+#alphabet-plain-r {
+  background-image: url("./alphabet/unknown.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+}
+#alphabet-plain-s {
+  background-image: url("./alphabet/unknown.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+}
+#alphabet-plain-t {
+  background-image: url("./alphabet/unknown.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+}
+#alphabet-plain-u {
+  background-image: url("./alphabet/unknown.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+}
+#alphabet-plain-v {
+  background-image: url("./alphabet/unknown.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+}
+#alphabet-plain-w {
+  background-image: url("./alphabet/unknown.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+}
+#alphabet-plain-x {
+  background-image: url("./alphabet/unknown.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+}
+#alphabet-plain-y {
+  background-image: url("./alphabet/unknown.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+}
+#alphabet-plain-z {
+  background-image: url("./alphabet/unknown.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+}
+.alphabet-letters-row {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: calc(100% / 26);
+}
+.alphabet-left {
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  width: calc(50% - 8px);
+  height: calc(100% - 8px);
+  border: outset;
+}
+.alphabet-left:hover {
+  border: inset;
+}
+.alphabet-right {
+  position: absolute;
+  left: calc(50% + 2px);
+  top: 2px;
+  width: calc(50% - 8px);
+  height: calc(100% - 8px);
+  border: inset;
+}
+.text-character-cipher {
+  font-size: 1.5em;
+  color: white;
+  background-color: black;
+  margin: 1px;
+  width: 1.5em;
+  display: inline-block;
+  text-align: center;
+}
+.text-character-plain {
+  font-size: 1.5em;
+  color: black;
+  background-color: white;
+  margin: 1px;
+  width: 1.5em;
+  display: inline-block;
+  text-align: center;
+}

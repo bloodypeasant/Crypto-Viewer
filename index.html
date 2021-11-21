@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Crypto Viewer</title>
+    <script src="app.js"></script>
+  </head>
+  <body>
+    <div id="menu-div">
+      <div
+        id="menu-a"
+        class="menu-letter"
+        onclick="handlePlainClick(this, 'A');"
+      ></div>
+      <div
+        id="menu-b"
+        class="menu-letter"
+        onclick="handlePlainClick(this, 'B');"
+      ></div>
+      <div
+        id="menu-c"
+        class="menu-letter"
+        onclick="handlePlainClick(this, 'C');"
+      ></div>
+      <div
+        id="menu-d"
+        class="menu-letter"
+        onclick="handlePlainClick(this, 'D');"
+      ></div>
+      <div
+        id="menu-e"
+        class="menu-letter"
+        onclick="handlePlainClick(this, 'E');"
+      ></div>
+      <div
+        id="menu-f"
+        class="menu-letter"
+        onclick="handlePlainClick(this, 'F');"
+      ></div>
+      <div
+        id="menu-g"
+        class="menu-letter"
+        onclick="handlePlainClick(this, 'G');"
+      ></div>
+      <div
+        id="menu-h"
+        class="menu-letter"
+        onclick="handlePlainClick(this, 'H');"
+      ></div>
+      <div
+        id="menu-i"
+        class="menu-letter"
+        onclick="handlePlainClick(this, 'I');"
+      ></div>
+      <div
+        id="menu-j"
+        class="menu-letter"
+        onclick="handlePlainClick(this, 'J');"
+      ></div>
+      <div
+        id="menu-k"
+        class="menu-letter"
+        onclick="handlePlainClick(this, 'K');"
+      ></div>
+      <div
+        id="menu-l"
+        class="menu-letter"
+        onclick="handlePlainClick(this, 'L');"
+      ></div>
+      <div
+        id="menu-m"
+        class="menu-letter"
+        onclick="handlePlainClick(this, 'M');"
+      ></div>
+      <div
+        id="menu-n"
+        class="menu-letter"
+        onclick="handlePlainClick(this, 'N');"
+      ></div>
+      <div
+        id="menu-o"
+        class="menu-letter"
+        onclick="handlePlainClick(this, 'O');"
+      ></div>
+      <div
+        id="menu-p"
+        class="menu-letter"
+        onclick="handlePlainClick(this, 'P');"
+      ></div>
+      <div
+        id="menu-q"
+        class="menu-letter"
+        onclick="handlePlainClick(this, 'Q');"
+      ></div>
+      <div
+        id="menu-r"
+        class="menu-letter"
+        onclick="handlePlainClick(this, 'R');"
+      ></div>
+      <div
+        id="menu-s"
+        class="menu-letter"
+        onclick="handlePlainClick(this, 'S');"
+      ></div>
+      <div
+        id="menu-t"
+        class="menu-letter"
+        onclick="handlePlainClick(this, 'T');"
+      ></div>
+      <div
+        id="menu-u"
+        class="menu-letter"
+        onclick="handlePlainClick(this, 'U');"
+      ></div>
+      <div
+        id="menu-v"
+        class="menu-letter"
+        onclick="handlePlainClick(this, 'V');"
+      ></div>
+      <div
+        id="menu-w"
+        class="menu-letter"
+        onclick="handlePlainClick(this, 'W');"
+      ></div>
+      <div
+        id="menu-x"
+        class="menu-letter"
+        onclick="handlePlainClick(this, 'X');"
+      ></div>
+      <div
+        id="menu-y"
+        class="menu-letter"
+        onclick="handlePlainClick(this, 'Y');"
+      ></div>
+      <div
+        id="menu-z"
+        class="menu-letter"
+        onclick="handlePlainClick(this, 'Z');"
+      ></div>
+      <div id="menu-undo" class="menu-letter"></div>
+      <div id="menu-dropdown" class="menu-letter"></div>
+    </div>
+    <div id="alphabet-div">
+      <div id="alphabet-label-div">
+        <div id="alphabet-label-top"></div>
+        <div id="alphabet-label-bottom">
+          <div id="alphabet-label-cipher" class="alphabet-left"></div>
+          <div id="alphabet-label-plain" class="alphabet-right"></div>
+        </div>
+      </div>
+      <div id="alphabet-letters-div">
+        <div id="alphabet-a" class="alphabet-letters-row">
+          <div
+            id="alphabet-cipher-a"
+            class="alphabet-left"
+            onclick="handleCipherClick(this, 'alphabet-plain-a', 'A');"
+          ></div>
+          <div id="alphabet-plain-a" class="alphabet-right"></div>
+        </div>
+        <div id="alphabet-b" class="alphabet-letters-row">
+          <div
+            id="alphabet-cipher-b"
+            class="alphabet-left"
+            onclick="handleCipherClick(this, 'alphabet-plain-b', 'B');"
+          ></div>
+          <div id="alphabet-plain-b" class="alphabet-right"></div>
+        </div>
+        <div id="alphabet-c" class="alphabet-letters-row">
+          <div
+            id="alphabet-cipher-c"
+            class="alphabet-left"
+            onclick="handleCipherClick(this, 'alphabet-plain-c', 'C');"
+          ></div>
+          <div id="alphabet-plain-c" class="alphabet-right"></div>
+        </div>
+        <div id="alphabet-d" class="alphabet-letters-row">
+          <div
+            id="alphabet-cipher-d"
+            class="alphabet-left"
+            onclick="handleCipherClick(this, 'alphabet-plain-d', 'D');"
+          ></div>
+          <div id="alphabet-plain-d" class="alphabet-right"></div>
+        </div>
+        <div id="alphabet-e" class="alphabet-letters-row">
+          <div
+            id="alphabet-cipher-e"
+            class="alphabet-left"
+            onclick="handleCipherClick(this, 'alphabet-plain-e', 'E');"
+          ></div>
+          <div id="alphabet-plain-e" class="alphabet-right"></div>
+        </div>
+        <div id="alphabet-f" class="alphabet-letters-row">
+          <div
+            id="alphabet-cipher-f"
+            class="alphabet-left"
+            onclick="handleCipherClick(this, 'alphabet-plain-f', 'F');"
+          ></div>
+          <div id="alphabet-plain-f" class="alphabet-right"></div>
+        </div>
+        <div id="alphabet-g" class="alphabet-letters-row">
+          <div
+            id="alphabet-cipher-g"
+            class="alphabet-left"
+            onclick="handleCipherClick(this, 'alphabet-plain-g', 'G');"
+          ></div>
+          <div id="alphabet-plain-g" class="alphabet-right"></div>
+        </div>
+        <div id="alphabet-h" class="alphabet-letters-row">
+          <div
+            id="alphabet-cipher-h"
+            class="alphabet-left"
+            onclick="handleCipherClick(this, 'alphabet-plain-h', 'H');"
+          ></div>
+          <div id="alphabet-plain-h" class="alphabet-right"></div>
+        </div>
+        <div id="alphabet-i" class="alphabet-letters-row">
+          <div
+            id="alphabet-cipher-i"
+            class="alphabet-left"
+            onclick="handleCipherClick(this, 'alphabet-plain-i', 'I');"
+          ></div>
+          <div id="alphabet-plain-i" class="alphabet-right"></div>
+        </div>
+        <div id="alphabet-j" class="alphabet-letters-row">
+          <div
+            id="alphabet-cipher-j"
+            class="alphabet-left"
+            onclick="handleCipherClick(this, 'alphabet-plain-j', 'J');"
+          ></div>
+          <div id="alphabet-plain-j" class="alphabet-right"></div>
+        </div>
+        <div id="alphabet-k" class="alphabet-letters-row">
+          <div
+            id="alphabet-cipher-k"
+            class="alphabet-left"
+            onclick="handleCipherClick(this, 'alphabet-plain-k', 'K');"
+          ></div>
+          <div id="alphabet-plain-k" class="alphabet-right"></div>
+        </div>
+        <div id="alphabet-l" class="alphabet-letters-row">
+          <div
+            id="alphabet-cipher-l"
+            class="alphabet-left"
+            onclick="handleCipherClick(this, 'alphabet-plain-l', 'L');"
+          ></div>
+          <div id="alphabet-plain-l" class="alphabet-right"></div>
+        </div>
+        <div id="alphabet-m" class="alphabet-letters-row">
+          <div
+            id="alphabet-cipher-m"
+            class="alphabet-left"
+            onclick="handleCipherClick(this, 'alphabet-plain-m', 'M');"
+          ></div>
+          <div id="alphabet-plain-m" class="alphabet-right"></div>
+        </div>
+        <div id="alphabet-n" class="alphabet-letters-row">
+          <div
+            id="alphabet-cipher-n"
+            class="alphabet-left"
+            onclick="handleCipherClick(this, 'alphabet-plain-n', 'N');"
+          ></div>
+          <div id="alphabet-plain-n" class="alphabet-right"></div>
+        </div>
+        <div id="alphabet-o" class="alphabet-letters-row">
+          <div
+            id="alphabet-cipher-o"
+            class="alphabet-left"
+            onclick="handleCipherClick(this, 'alphabet-plain-o', 'O');"
+          ></div>
+          <div id="alphabet-plain-o" class="alphabet-right"></div>
+        </div>
+        <div id="alphabet-p" class="alphabet-letters-row">
+          <div
+            id="alphabet-cipher-p"
+            class="alphabet-left"
+            onclick="handleCipherClick(this, 'alphabet-plain-p', 'P');"
+          ></div>
+          <div id="alphabet-plain-p" class="alphabet-right"></div>
+        </div>
+        <div id="alphabet-q" class="alphabet-letters-row">
+          <div
+            id="alphabet-cipher-q"
+            class="alphabet-left"
+            onclick="handleCipherClick(this, 'alphabet-plain-q', 'Q');"
+          ></div>
+          <div id="alphabet-plain-q" class="alphabet-right"></div>
+        </div>
+        <div id="alphabet-r" class="alphabet-letters-row">
+          <div
+            id="alphabet-cipher-r"
+            class="alphabet-left"
+            onclick="handleCipherClick(this, 'alphabet-plain-r', 'R');"
+          ></div>
+          <div id="alphabet-plain-r" class="alphabet-right"></div>
+        </div>
+        <div id="alphabet-s" class="alphabet-letters-row">
+          <div
+            id="alphabet-cipher-s"
+            class="alphabet-left"
+            onclick="handleCipherClick(this, 'alphabet-plain-s', 'S');"
+          ></div>
+          <div id="alphabet-plain-s" class="alphabet-right"></div>
+        </div>
+        <div id="alphabet-t" class="alphabet-letters-row">
+          <div
+            id="alphabet-cipher-t"
+            class="alphabet-left"
+            onclick="handleCipherClick(this, 'alphabet-plain-t', 'T');"
+          ></div>
+          <div id="alphabet-plain-t" class="alphabet-right"></div>
+        </div>
+        <div id="alphabet-u" class="alphabet-letters-row">
+          <div
+            id="alphabet-cipher-u"
+            class="alphabet-left"
+            onclick="handleCipherClick(this, 'alphabet-plain-u', 'U');"
+          ></div>
+          <div id="alphabet-plain-u" class="alphabet-right"></div>
+        </div>
+        <div id="alphabet-v" class="alphabet-letters-row">
+          <div
+            id="alphabet-cipher-v"
+            class="alphabet-left"
+            onclick="handleCipherClick(this, 'alphabet-plain-v', 'V');"
+          ></div>
+          <div id="alphabet-plain-v" class="alphabet-right"></div>
+        </div>
+        <div id="alphabet-w" class="alphabet-letters-row">
+          <div
+            id="alphabet-cipher-w"
+            class="alphabet-left"
+            onclick="handleCipherClick(this, 'alphabet-plain-w', 'W');"
+          ></div>
+          <div id="alphabet-plain-w" class="alphabet-right"></div>
+        </div>
+        <div id="alphabet-x" class="alphabet-letters-row">
+          <div
+            id="alphabet-cipher-x"
+            class="alphabet-left"
+            onclick="handleCipherClick(this, 'alphabet-plain-x', 'X');"
+          ></div>
+          <div id="alphabet-plain-x" class="alphabet-right"></div>
+        </div>
+        <div id="alphabet-y" class="alphabet-letters-row">
+          <div
+            id="alphabet-cipher-y"
+            class="alphabet-left"
+            onclick="handleCipherClick(this, 'alphabet-plain-y', 'Y');"
+          ></div>
+          <div id="alphabet-plain-y" class="alphabet-right"></div>
+        </div>
+        <div id="alphabet-z" class="alphabet-letters-row">
+          <div
+            id="alphabet-cipher-z"
+            class="alphabet-left"
+            onclick="handleCipherClick(this, 'alphabet-plain-z', 'Z');"
+          ></div>
+          <div id="alphabet-plain-z" class="alphabet-right"></div>
+        </div>
+      </div>
+    </div>
+    <div id="text-div"></div>
+    <div id="tools-div"></div>
+    <div id="history-div"></div>
+    <div id="menu-popup">
+      <div id="menu-popup-close">
+        <span id="menu-popup-close-inner">X</span>
+      </div>
+      <div id="menu-popup-items">
+        <div id="load-ciphertext" class="menu-popup-item">
+          <div>Load ciphertext file</div>
+          <input type="file" id="load-ciphertext-input" />
+        </div>
+        <div id="load-info" class="menu-popup-item">
+          <div>Load info file</div>
+          <input type="file" id="load-info-input" />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
