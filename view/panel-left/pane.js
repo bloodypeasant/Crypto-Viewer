@@ -21,7 +21,6 @@ function init() {
 }
 
 function resize(pxPanelWidth, pxPanelHeight) {
-  console.log("    pane.resize()");
   style(el, {
     width: `${pxPanelWidth - MARGIN_LEFT_PX - MARGIN_RIGHT_PX}px`,
     height: `${pxPanelHeight - MARGIN_TOP_PX - MARGIN_BOTTOM_PX}px`,

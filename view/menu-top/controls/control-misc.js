@@ -55,7 +55,6 @@ class ControlMisc {
     });
   }
   resize(stSize, pxRightOffset, pxInnerOffset, pxTopOffset) {
-    // console.log(`      control resize()`);
     let right = pxRightOffset + (parseInt(stSize) + pxInnerOffset) * this.pos;
     style(this.el, {
       top: `${pxTopOffset}px`,

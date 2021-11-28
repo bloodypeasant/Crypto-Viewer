@@ -17,7 +17,6 @@ function init() {
 }
 
 function resize(pxPanelTop, pxWindowHeight) {
-  console.log("  panelTop.resize()");
   style(el, {
     top: `${pxPanelTop}px`,
     height: `${Math.floor(PCT_HEIGHT * (pxWindowHeight - pxPanelTop))}px`,

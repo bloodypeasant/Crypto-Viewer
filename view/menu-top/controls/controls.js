@@ -23,7 +23,6 @@ function init() {
 }
 
 function resize(pxWidth, pxHeightControls, stSizeControl) {
-  console.log("    controls.resize()");
   misc.resize(stSizeControl, RIGHT_OFFSET, INNER_OFFSET, TOP_OFFSET);
   undo.resize(stSizeControl, RIGHT_OFFSET, INNER_OFFSET, TOP_OFFSET);
   style(el, {

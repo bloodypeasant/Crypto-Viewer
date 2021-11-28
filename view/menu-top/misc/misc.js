@@ -32,7 +32,6 @@ function init() {
 }
 
 function resize(pxTop) {
-  console.log("    misc.resize()");
   style(el, {
     top: `${pxTop}px`,
   });

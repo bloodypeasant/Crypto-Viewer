@@ -42,7 +42,6 @@ function makeLetters() {
 }
 
 function resize(pxWidth) {
-  console.log("    letters.resize()");
   let pxSizeLetter = Math.min(
     Math.floor((pxWidth - LEFT_OFFSET) / 27 - INNER_OFFSET),
     MAX_SIZE

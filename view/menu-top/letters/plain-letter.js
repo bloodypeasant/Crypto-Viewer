@@ -63,7 +63,6 @@ class PlainLetter {
     });
   }
   resize(pxSize, pxLeftOffset, pxInnerOffset, pxTopOffset) {
-    // console.log(`      letter ${this.ch} resize()`);
     let left = pxLeftOffset + (pxSize + pxInnerOffset) * this.pos;
     style(this.el, {
       left: `${left}px`,

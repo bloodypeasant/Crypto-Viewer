@@ -15,7 +15,6 @@ function init() {
 }
 
 function resize(pxPanelTop, pxWindowHeight) {
-  console.log("  panelLeft.resize()");
   style(el, {
     top: `${pxPanelTop}px`,
     height: `${Math.floor(pxWindowHeight - pxPanelTop)}px`,

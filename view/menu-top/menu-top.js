@@ -24,7 +24,6 @@ function init() {
 }
 
 function resize(pxWidthWindow) {
-  console.log("  menuTop.resize()");
   let pxWidthLetters = Math.floor((pxWidthWindow / 30) * 27);
   letters.resize(pxWidthLetters);
   let stSizeLetter = letters.plainLetters[0].el.style.height;

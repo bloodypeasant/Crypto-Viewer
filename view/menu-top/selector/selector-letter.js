@@ -2,7 +2,6 @@ import { style } from "/view/utilities.js";
 
 const COLOR_BUTTON = "black";
 const COLOR_MOUSEOVER = "cornflowerblue";
-// const COLOR_PRESSED = "yellow";
 const PATH_LETTERS = "view/menu-top/images/cipher-letters/";
 
 class SelectorLetter {
@@ -48,11 +47,6 @@ class SelectorLetter {
         style(this.el, {
           display: "none",
         });
-        // this.isPressed = true;
-        // style(this.el, {
-        //   border: "inset",
-        //   "background-color": COLOR_PRESSED,
-        // });
         window.dispatchEvent(
           new CustomEvent("cipherLetterSelected", { detail: this })
         );
@@ -65,14 +59,7 @@ class SelectorLetter {
       display: "inline-block",
     });
   }
-  // setUnavailable() {
-  //   this.isAvailable = false;
-  //   style(this.el, {
-  //     display: "none",
-  //   });
-  // }
   resize(pxSize, pxLeftOffset, pxInnerOffset, pxTopOffset) {
-    // console.log(`      letter ${this.ch} resize()`);
     let left = pxLeftOffset + (pxSize + pxInnerOffset) * this.col;
     let top = pxTopOffset + (pxSize + pxInnerOffset) * this.row;
     style(this.el, {

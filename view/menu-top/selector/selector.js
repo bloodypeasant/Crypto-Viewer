@@ -60,7 +60,6 @@ function makeLetters() {
 }
 
 function resize(pxSizeLetter, pxTop) {
-  console.log("    selector.resize()");
   pxCurrentLetterSize = pxSizeLetter;
   for (let selectorLetter of selectorLetters) {
     selectorLetter.resize(pxSizeLetter, LEFT_OFFSET, INNER_OFFSET, TOP_OFFSET);
